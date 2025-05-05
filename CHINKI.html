@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinki, Will You Be Mine?</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #ffccff, #ffe6e6);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #e91e63; /* Romantic pink */
+            text-shadow: 2px 2px 4px #00000050;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #880e4f; /* Deep rose */
+            max-width: 80%;
+        }
+
+        .button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            background-color: #d81b60;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ad1457;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        .heart {
+            font-size: 3rem;
+            color: red;
+        }
+
+        .kiss {
+            font-size: 3rem;
+            color: #ff69b4; /* Pink kiss emoji color */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        audio {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Chinki, Will You Be Mine? 💖</h1>
+    <p>
+        With every heartbeat, my soul whispers your name.<br>
+        I don’t know how, but I’ve truly fallen for you.
+    </p>
+    <a href="https://youtube.com/shorts/4xZ7v8A0k-I?si=x0nJWQinoC308hqU" class="button" target="_blank">🎵 This song is dedicated for you</a>
+    <br>
+    <a href="https://wa.me/919709402961" class="button" target="_blank">💖click here💖</a>
+
+    <audio controls autoplay loop>
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        <!-- Note: YouTube shorts can't play directly as audio. You need to extract or upload audio separately. -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Create floating hearts and kiss emojis
+        for (let i = 0; i < 10; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('emoji', 'heart');
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 2 + 2}s`;
+            document.body.appendChild(heart);
+
+            let kiss = document.createElement('div');
+            kiss.classList.add('emoji', 'kiss');
+            kiss.style.left = `${Math.random() * 100}vw`;
+            kiss.style.animationDuration = `${Math.random() * 2 + 2}s`;
+            document.body.appendChild(kiss);
+        }
+    </script>
+
+</body>
+</html>
